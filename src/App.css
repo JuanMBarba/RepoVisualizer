@@ -1,1 +1,27 @@
+.repoVisualizerPage {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
 
+.orgTitle {
+    border: 1px solid red;
+    text-align: center;
+    font-weight: bold;
+    font-size:xx-large;
+    width: 80vw;
+    padding: 20px;
+}   
+
+.repoList {
+    border: 1px solid blue;
+    padding: 20px;
+    width: 80vw;
+    list-style-type: none;
+}
+
+.repoInfo {
+    border: 1px solid green;
+}
