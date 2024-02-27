@@ -15,20 +15,35 @@ const App = () => {
     fetchData();
   }, []);
 
+  const repoLists = (repos) => {
+    let result = repos.map((repo) =>
+      <ul className='repoInfo'>
+        <li>Repo name : {repo.name}</li>
+        <li>Language : {repo.language}</li>
+        <li>Description : {repo.description}</li>
+        <li>Star count : {repo.stargazers_count}</li>
+        <li>Fork count : {repo.forks_count}</li>
+        <li>Date created : {repo.created_at}</li>
+      </ul>
+    )
+    return result;
+  };
+
   return (
     <div className='repoVisualizerPage'>
       <h1 className='orgTitle'>
         Neflix Repos
       </h1>
       <ul className='repoList'>
-        <ul className='repoInfo'>
+        {/* <ul className='repoInfo'>
           <li>Repo name : {repos[0].name}</li>
           <li>Language : {repos[0].language}</li>
           <li>Description : {repos[0].description}</li>
           <li>Star count : {repos[0].stargazers_count}</li>
           <li>Fork count : {repos[0].forks_count}</li>
           <li>Date created : {repos[0].created_at}</li>
-        </ul>
+        </ul> */}
+        {repos ? repoLists(repos) : null}
       </ul>
     </div>
   );
