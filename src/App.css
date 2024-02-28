@@ -20,6 +20,7 @@
     padding: 20px;
     width: 80vw;
     list-style-type: none;
+    overflow: scroll;
 }
 
 .repoInfo {

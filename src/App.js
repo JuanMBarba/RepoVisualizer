@@ -3,7 +3,7 @@ import "./reset.css";
 import "./App.css";
 
 const App = () => {
-  const [repos, setRepo] = useState({});
+  const [repos, setRepo] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,9 +15,9 @@ const App = () => {
     fetchData();
   }, []);
 
-  const repoLists = (repos) => {
+  const repoLists = () => {
     let result = repos.map((repo) =>
-      <ul className='repoInfo'>
+      <ul key={repo.name} className='repoInfo'>
         <li>Repo name : {repo.name}</li>
         <li>Language : {repo.language}</li>
         <li>Description : {repo.description}</li>
@@ -43,7 +43,7 @@ const App = () => {
           <li>Fork count : {repos[0].forks_count}</li>
           <li>Date created : {repos[0].created_at}</li>
         </ul> */}
-        {repos ? repoLists(repos) : null}
+        {repos !== undefined ? repoLists() : "Loading..."}
       </ul>
     </div>
   );
