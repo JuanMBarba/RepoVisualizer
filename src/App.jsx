@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import "./reset.css";
 import "./App.css";
+import ToggleCommits from './ToggleCommits';
 
 const App = () => {
   const [repos, setRepo] = useState();
@@ -26,6 +27,7 @@ const App = () => {
         <li>Star count : {repo.stargazers_count}</li>
         <li>Fork count : {repo.forks_count}</li>
         <li>Date created : {repo.created_at}</li>
+        <ToggleCommits repoName={repo.name}/>
       </ul>
     )
     return result;
