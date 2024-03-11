@@ -8,7 +8,14 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://api.github.com/orgs/Netflix/repos');
+      const response = await fetch('https://api.github.com/orgs/Netflix/repos', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json', // Example of a header
+          'Authorization': 'Bearer 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', // Example of an Authorization header
+          'X-GitHub-Api-Version' : '2022-11-28'
+        }
+      });
       const data = await response.json();
       console.log(data);
       setRepo(data);
@@ -27,7 +34,7 @@ const App = () => {
         <li>Star count : {repo.stargazers_count}</li>
         <li>Fork count : {repo.forks_count}</li>
         <li>Date created : {repo.created_at}</li>
-        <ToggleCommits repoName={repo.name}/>
+        {/* <ToggleCommits repoName={repo.name}/> */}
       </ul>
     )
     return result;
