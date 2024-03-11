@@ -16,7 +16,9 @@ const App = () => {
   }, []);
 
   const repoLists = () => {
-    let result = repos.map((repo) =>
+    let result = repos
+    .sort((repo1, repo2) => repo2.stargazers_count - repo1.stargazers_count)
+    .map((repo) =>
       <ul key={repo.name} className='repoInfo'>
         <li>Repo name : {repo.name}</li>
         <li>Language : {repo.language}</li>
