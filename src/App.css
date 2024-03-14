@@ -29,3 +29,7 @@
     padding: 20px;
     margin-bottom: 20px;
 }
+
+.commitInfo {
+    border: 1px solid purple;
+}
