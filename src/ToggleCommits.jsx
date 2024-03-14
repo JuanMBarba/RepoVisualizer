@@ -30,7 +30,7 @@ const ToggleCommits = (props) => {
     const commitLists = () => {
         let result = commits
             .map((commit) =>
-                <ul key={commit.node_id} className='repoInfo'>
+                <ul key={commit.node_id}>
                     <li>Message: {commit.commit.message}</li>
                 </ul>
             )
