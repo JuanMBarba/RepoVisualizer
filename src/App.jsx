@@ -30,10 +30,10 @@ const App = () => {
       <ul key={repo.name} className='repoInfo'>
         <li>Repo name : {repo.name}</li>
         <li>Language : {repo.language}</li>
-        <li>Description : {repo.description}</li>
         <li>Star count : {repo.stargazers_count}</li>
         <li>Fork count : {repo.forks_count}</li>
         <li>Date created : {repo.created_at}</li>
+        <li>Description : {repo.description}</li>
         <ToggleCommits repoName={repo.name} />
       </ul>
     )

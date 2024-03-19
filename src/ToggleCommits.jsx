@@ -32,17 +32,20 @@ const ToggleCommits = (props) => {
             .map((commit) =>
                 <ul key={commit.node_id} className="commitInfo">
                     <li>Username: {commit.commit.author.name}</li>
-                    <li>Hash: {commit.sha}</li>
                     <li>Date: {commit.commit.author.date}</li>
+                    <li>Hash: {commit.sha}</li>
                     <li>Message: {commit.commit.message}</li>
                 </ul>
             )
-        return result;
+        return (
+            <div className="commitList">{result}</div>
+        );
     };
 
     return (
-        <div onClick={toggleVisibility}>
-            {isVisible && isDataFetched ? commitLists() : "Commits >"}
+        <div>
+            <div className="highlighted clickable" onClick={toggleVisibility}>{isVisible && isDataFetched ? "Commits ▾" : "Commits ▸"}</div>
+            {isVisible && isDataFetched ? commitLists() : ""}
         </div>
     );
 };

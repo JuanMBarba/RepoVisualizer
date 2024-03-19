@@ -16,7 +16,6 @@
 }   
 
 .repoList {
-    border: 1px solid blue;
     background-color: whitesmoke;
     padding: 20px;
     width: 80vw;
@@ -33,12 +32,30 @@
     
 }
 
+.commitList {
+    /* border: 1px solid blue; */
+    height: 50vh;
+    overflow: scroll;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
 .commitInfo {
     border: 1px solid lightgrey;
     background-color: white;
     box-shadow: 1px 1px black;
     margin-top: 10px;
     margin-left: 5%;
+    margin-right: 5%;
     padding: 10px;
     border-radius: 10px;
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+.highlighted{
+    color: blue;
+    text-decoration-color: blue;
 }
