@@ -12,7 +12,7 @@ const App = () => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json', // Example of a header
-          'Authorization': 'Bearer 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', // Example of an Authorization header
+          'Authorization': 'Bearer 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', // Example of an Authorization header
           'X-GitHub-Api-Version' : '2022-11-28'
         }
       });
