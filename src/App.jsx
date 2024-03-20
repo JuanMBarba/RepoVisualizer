@@ -28,17 +28,22 @@ const App = () => {
     .sort((repo1, repo2) => repo2.stargazers_count - repo1.stargazers_count)
     .map((repo) =>
       <div key={repo.name} className='repoInfo grid'>
-        <ul>
-        <li>Repo Name : {repo.name}</li>
-        <li>Language : {repo.language}</li>
-        <li>Star Count : {repo.stargazers_count}</li>
-        <li>Fork Count : {repo.forks_count}</li>
-        <li>Date Created : {repo.created_at}</li>
+        <ul className='repoTitles'>
+          <li>Repo Name</li>
+          <li>Language</li>
+          <li>Star Count</li>
+          <li>Fork Count</li>
+          <li>Date Created</li>
         </ul>
         <ul>
-        <li>Description :</li>
-        <li>{repo.description}</li>
+          <li> : {repo.name}</li>
+          <li> : {repo.language}</li>
+          <li> : {repo.stargazers_count}</li>
+          <li> : {repo.forks_count}</li>
+          <li> : {repo.created_at}</li>
         </ul>
+        <div className='repoTitles'>Description : </div>
+        <span>{repo.description}</span>
         <ToggleCommits repoName={repo.name} />
       </div>
     )

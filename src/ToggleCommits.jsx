@@ -31,15 +31,18 @@ const ToggleCommits = (props) => {
         let result = commits
             .map((commit) =>
                 <div key={commit.node_id} className="commitInfo grid">
-                    <ul>
-                        <li>Username: {commit.commit.author.name}</li>
-                        <li>Date: {commit.commit.author.date}</li>
-                        <li>Hash: {commit.sha}</li>
+                    <ul className="repoTitles">
+                        <li>Username</li>
+                        <li>Date</li>
+                        <li>Hash</li>
                     </ul>
                     <ul>
-                        <li>Message: </li>
-                        <li>{commit.commit.message}</li>
+                        <li>: {commit.commit.author.name}</li>
+                        <li>: {commit.commit.author.date}</li>
+                        <li>: {commit.sha}</li>
                     </ul>
+                    <div className="repoTitles">Message: </div>
+                    <span>{commit.commit.message}</span>
                 </div>
             )
         return (
