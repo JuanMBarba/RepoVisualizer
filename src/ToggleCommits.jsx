@@ -30,12 +30,17 @@ const ToggleCommits = (props) => {
     const commitLists = () => {
         let result = commits
             .map((commit) =>
-                <ul key={commit.node_id} className="commitInfo">
-                    <li>Username: {commit.commit.author.name}</li>
-                    <li>Date: {commit.commit.author.date}</li>
-                    <li>Hash: {commit.sha}</li>
-                    <li>Message: {commit.commit.message}</li>
-                </ul>
+                <div key={commit.node_id} className="commitInfo grid">
+                    <ul>
+                        <li>Username: {commit.commit.author.name}</li>
+                        <li>Date: {commit.commit.author.date}</li>
+                        <li>Hash: {commit.sha}</li>
+                    </ul>
+                    <ul>
+                        <li>Message: </li>
+                        <li>{commit.commit.message}</li>
+                    </ul>
+                </div>
             )
         return (
             <div className="commitList">{result}</div>
@@ -43,7 +48,7 @@ const ToggleCommits = (props) => {
     };
 
     return (
-        <div>
+        <div className="gridSpanCol">
             <div className="highlighted clickable commitButton" onClick={toggleVisibility}>{isVisible && isDataFetched ? "Commits ▾" : "Commits ▸"}</div>
             {isVisible && isDataFetched ? commitLists() : ""}
         </div>

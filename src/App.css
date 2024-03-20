@@ -29,8 +29,6 @@
     border-radius: 20px;
     padding: 20px 20px 10px 20px;
     margin-bottom: 10px;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 2fr; */
 }
 
 .commitList {
@@ -72,4 +70,13 @@
 .highlighted{
     color: blue;
     text-decoration-color: blue;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.gridSpanCol{
+    grid-column: 1/3;
 }
