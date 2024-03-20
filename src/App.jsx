@@ -28,11 +28,11 @@ const App = () => {
     .sort((repo1, repo2) => repo2.stargazers_count - repo1.stargazers_count)
     .map((repo) =>
       <ul key={repo.name} className='repoInfo'>
-        <li>Repo name : {repo.name}</li>
+        <li>Repo Name : {repo.name}</li>
         <li>Language : {repo.language}</li>
-        <li>Star count : {repo.stargazers_count}</li>
-        <li>Fork count : {repo.forks_count}</li>
-        <li>Date created : {repo.created_at}</li>
+        <li>Star Count : {repo.stargazers_count}</li>
+        <li>Fork Count : {repo.forks_count}</li>
+        <li>Date Created : {repo.created_at}</li>
         <li>Description : {repo.description}</li>
         <ToggleCommits repoName={repo.name} />
       </ul>

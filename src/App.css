@@ -1,5 +1,6 @@
 .repoVisualizerPage {
     border: 1px solid black;
+    font-family: monospace;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -7,18 +8,17 @@
 }
 
 .orgTitle {
-    border: 1px solid red;
+    border-bottom: 1px solid grey;
     text-align: center;
     font-weight: bold;
     font-size:xx-large;
-    width: 80vw;
+    width: 100vw;
     padding: 20px;
 }   
 
 .repoList {
     background-color: whitesmoke;
     padding: 20px;
-    width: 80vw;
     list-style-type: none;
     overflow: scroll;
 }
@@ -27,9 +27,10 @@
     border: 1px solid lightgray;
     background-color: white;
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 20px 10px 20px;
     margin-bottom: 10px;
-    
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 2fr; */
 }
 
 .commitList {
@@ -49,6 +50,19 @@
     margin-right: 5%;
     padding: 10px;
     border-radius: 10px;
+}
+
+.commitButton{
+    text-align: center;
+    margin: 5px;
+    background-color: whitesmoke;
+    padding: 5px;
+    width: 10%;
+    border-radius: 15px;
+}
+
+.commitButton:hover {
+    background-color: lightgrey;
 }
 
 .clickable:hover{

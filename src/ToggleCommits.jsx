@@ -44,7 +44,7 @@ const ToggleCommits = (props) => {
 
     return (
         <div>
-            <div className="highlighted clickable" onClick={toggleVisibility}>{isVisible && isDataFetched ? "Commits ▾" : "Commits ▸"}</div>
+            <div className="highlighted clickable commitButton" onClick={toggleVisibility}>{isVisible && isDataFetched ? "Commits ▾" : "Commits ▸"}</div>
             {isVisible && isDataFetched ? commitLists() : ""}
         </div>
     );
