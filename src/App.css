@@ -12,11 +12,12 @@
 
 .orgTitle {
     border-bottom: 1px solid grey;
-    text-align: center;
     font-weight: bold;
     font-size:xx-large;
     width: 100vw;
     padding: 20px;
+    display: flex;
+    justify-content: space-around;
 }   
 
 .repoList {

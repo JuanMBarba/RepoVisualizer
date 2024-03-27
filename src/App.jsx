@@ -52,9 +52,14 @@ const App = () => {
 
   return (
     <div className='repoVisualizerPage'>
-      <h1 className='orgTitle'>
-        Neflix Repos
-      </h1>
+      <div className='orgTitle'>
+        <h1 >
+          Neflix Repos
+        </h1>
+        <div>
+          Search Bar
+        </div>
+      </div>
       <ul className='repoList'>
         {/* <ul className='repoInfo'>
           <li>Repo name : {repos[0].name}</li>
