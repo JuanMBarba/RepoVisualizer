@@ -25,6 +25,10 @@ const App = () => {
     fetchData();
   }, [currentRepo]);
 
+  const receiveDataFromSearchBar = (data) => {
+    setCurrentRepo(data);
+  };
+
   const repoLists = () => {
     let result = repos
     .sort((repo1, repo2) => repo2.stargazers_count - repo1.stargazers_count)
@@ -58,7 +62,7 @@ const App = () => {
         <h1 >
           {currentRepo} Repos
         </h1>
-        <SearchBar />
+        <SearchBar sendDatatoApp={receiveDataFromSearchBar}/>
       </div>
       <ul className='repoList'>
         {/* <ul className='repoInfo'>
