@@ -2,13 +2,15 @@ import React, {useState, useEffect} from 'react';
 import "./reset.css";
 import "./App.css";
 import ToggleCommits from './ToggleCommits';
+import SearchBar from './SearchBar';
 
 const App = () => {
   const [repos, setRepo] = useState();
+  const [currentRepo, setCurrentRepo] = useState("Netflix")
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('https://api.github.com/orgs/Netflix/repos', {
+      const response = await fetch('https://api.github.com/orgs/'+currentRepo+'/repos', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json', // Example of a header
@@ -21,7 +23,7 @@ const App = () => {
       setRepo(data);
     };
     fetchData();
-  }, []);
+  }, [currentRepo]);
 
   const repoLists = () => {
     let result = repos
@@ -54,11 +56,9 @@ const App = () => {
     <div className='repoVisualizerPage'>
       <div className='orgTitle'>
         <h1 >
-          Neflix Repos
+          {currentRepo} Repos
         </h1>
-        <div>
-          Search Bar
-        </div>
+        <SearchBar />
       </div>
       <ul className='repoList'>
         {/* <ul className='repoInfo'>
