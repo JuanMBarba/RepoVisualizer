@@ -12,6 +12,7 @@
 
 .orgTitle {
     border-bottom: 1px solid grey;
+    color: rgb(159, 53, 159);
     font-weight: bold;
     font-size:xx-large;
     width: 100vw;
@@ -21,7 +22,7 @@
 }   
 
 .repoList {
-    background-color: whitesmoke;
+    background-color: rgba(242, 215, 226, 0.731);
     padding: 20px;
     list-style-type: none;
     overflow: scroll;
@@ -43,7 +44,7 @@
     /* border: 1px solid blue; */
     height: 50vh;
     overflow: scroll;
-    background-color: whitesmoke;
+    background-color: rgba(242, 215, 226, 0.731);
     border-radius: 10px;
 }
 
@@ -76,8 +77,8 @@
 }
 
 .highlighted{
-    color: blue;
-    text-decoration-color: blue;
+    color: rgb(205, 21, 205);
+    /* text-decoration-color: blue; */
 }
 
 .grid{
