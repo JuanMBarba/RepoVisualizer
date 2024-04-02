@@ -92,3 +92,12 @@
 .gridSpanCol{
     grid-column: 1/5;
 }
+
+.searchInput{
+    width: 30vw;
+    border: 1px solid rgb(159, 53, 159);
+    border-radius: 10px;
+    /* appearance: 1px solid purple; */
+    outline: 1px solid purple;
+    padding: 10px;
+}

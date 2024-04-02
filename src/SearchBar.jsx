@@ -19,6 +19,7 @@ const SearchBar = (props) => {
                 value={query}
                 onChange={handleChange}
                 placeholder="Enter Organization Name"
+                className="searchInput"
             />
 
         </form>
