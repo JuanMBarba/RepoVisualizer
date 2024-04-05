@@ -60,7 +60,7 @@ const App = () => {
     <div className='repoVisualizerPage'>
       <div className='orgTitle'>
         <h1 >
-          {currentRepo} Repos
+          {currentRepo.toUpperCase()} REPOS
         </h1>
         <SearchBar sendDatatoApp={receiveDataFromSearchBar}/>
       </div>
