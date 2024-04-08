@@ -20,7 +20,12 @@ const App = () => {
       });
       const data = await response.json();
       console.log(data);
-      setRepo(data);
+      if(data.message === "Not Found"){
+        setRepo([]);
+      }
+      else{
+        setRepo(data);
+      }
     };
     fetchData();
   }, [currentRepo]);
