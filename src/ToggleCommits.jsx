@@ -13,12 +13,13 @@ const ToggleCommits = (props) => {
     const fetchData = async () => {
         if(!isDataFetched){
             const response = await fetch('https://api.github.com/repos/Netflix/'+props.repoName+'/commits', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json', // Example of a header
-                    'Authorization': 'Bearer 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', // Example of an Authorization header
-                    'X-GitHub-Api-Version': '2022-11-28'
-                }
+                method: 'GET'
+                // ,
+                // headers: {
+                //     'Content-Type': 'application/json', // Example of a header
+                //     'Authorization': 'Bearer //ADD TOKEN HERE//', // Example of an Authorization header
+                //     'X-GitHub-Api-Version': '2022-11-28'
+                // }
             });
             const data = await response.json();
             console.log(data);
