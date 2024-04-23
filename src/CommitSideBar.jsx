@@ -26,7 +26,7 @@ const CommitSideBar = (props) => {
 
     return (
         <div>
-            commitLists()
+            {commitLists()}
         </div>
     );
 };
