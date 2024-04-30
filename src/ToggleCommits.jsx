@@ -12,7 +12,7 @@ const ToggleCommits = (props) => {
 
     const fetchData = async () => {
         if(!isDataFetched){
-            const response = await fetch('https://api.github.com/repos/Netflix/'+props.repoName+'/commits', {
+            const response = await fetch('https://api.github.com/repos/'+props.companyName+'/'+props.repoName+'/commits', {
                 method: 'GET'
                 // ,
                 // headers: {
@@ -25,6 +25,7 @@ const ToggleCommits = (props) => {
             console.log(data);
             setCommits(data);
             setIsDataFetched(true);
+            
         }
     };
 
@@ -54,6 +55,8 @@ const ToggleCommits = (props) => {
     return (
         <div className="gridSpanCol">
             <div className="highlighted clickable commitButton" onClick={toggleVisibility}>{isVisible && isDataFetched ? "Commits ▾" : "Commits ▸"}</div>
+            {console.log(commits)}
+            {console.log(isDataFetched)}
             {isVisible && isDataFetched ? commitLists() : ""}
         </div>
     );

@@ -56,7 +56,7 @@ const App = () => {
         </ul>
         <div className='repoTitles'>Description : </div>
         <span>{repo.description}</span>
-        <ToggleCommits repoName={repo.name} />
+        <ToggleCommits companyName={currentRepo} repoName={repo.name} />
       </div>
     )
     return result;
